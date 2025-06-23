@@ -1,0 +1,11 @@
+#ifndef PRECOMPILER_H
+#define PRECOMPILER_H
+#include "admin.h"
+#include "booking.h"
+#include "cinema.h"
+#include "movie.h"
+#include "seat.h"
+#include "show.h"
+#include "user.h"
+#include "utils.h"
+#endif //PRECOMPILER_H
