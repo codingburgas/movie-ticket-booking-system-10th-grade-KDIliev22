@@ -7,6 +7,6 @@ include_directories(include)
 
 file(GLOB SOURCES "src/*.cpp")
 
-add_executable(Chrome ${SOURCES}
+add_executable(Chrome ${SOURCES} #[[ krustih go taka za da bachka v dsk prosti mi]]
         include/precompiler.h)
 
