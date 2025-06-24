@@ -2,6 +2,7 @@
 #define BOOKING_H
 
 #include <string>
+#include <fstream>
 #include "seat.h"
 #include "show.h"
 
@@ -15,6 +16,7 @@ public:
     std::string getCustomerName() const;
     Show getShow() const;
     Seat getSeat() const;
+    void saveToFile(const std::string& filename) const;
 };
 
 #endif

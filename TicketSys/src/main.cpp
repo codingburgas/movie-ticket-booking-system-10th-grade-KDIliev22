@@ -1,24 +1,24 @@
 #include <iostream>
 #include "precompiler.h"
 int main() {
-
-    // Testing section, will be removed
-    Cinema c("Cinema City", "Burgas");
-    std::cout << "Cinema: " << c.getName() << ", City: " << c.getCity() << "\n";
-    Movie m("Back to the Future", "Science Fiction");
-    std::cout << "Movie: " << m.getTitle() << ", Genre: " << m.getGenre() << "\n";
-    Show s(m.getTitle(), "10:17 PM");
-    std::cout << "Show: " << s.getMovieTitle() << " at " << s.getTime() << "\n";
-    Seat seat1(1, "Gold");
-    std::cout << "Seat #" << seat1.getNumber() << ", Type: " << seat1.getType()
-              << ", Booked: " << seat1.isBooked() << "\n";
-    seat1.book();
-    std::cout << "After booking: Booked: " << seat1.isBooked() << "\n";
-    Booking booking("ASDF", s, seat1);
-    std::cout << "Booking for: " << booking.getCustomerName() << ", Movie: " << booking.getShow().getMovieTitle() << ", Seat #: " << booking.getSeat().getNumber() << "\n";
-    User u("Panyu", "Antonovski");
-    std::cout << "User: " << u.getUsername() << "\n";
-    std::cout << "Password check (Panyu): " << u.checkPassword("Antonovuski") << "\n";
+    bool running = true;
+    while (running) {
+        std::string customerName;
+        int seatNumber;
+        std::cout << "\n=== Buy a ticket ===\n";
+        std::cout << "Enter your name: ";
+        std::cin >> customerName;
+        std::cout << "Choose seat number: ";
+        std::cin >> seatNumber;
+        Seat customSeat(seatNumber, "Silver");
+        Show show("Back to the Future", "10:17 PM");
+        Booking userBooking(customerName, show, customSeat);
+        userBooking.saveToFile("../data/bookings.txt");
+        std::cout << "Booking confirmed for " << userBooking.getCustomerName()
+                  << " - Seat #" << userBooking.getSeat().getNumber() << "\n";
+        std::cout << "Book another? (1: Yes, 0: No): ";
+        std::cin >> running;
+    }
+    std::cout << "That's all folks!\n";
     return 0;
 }
-
