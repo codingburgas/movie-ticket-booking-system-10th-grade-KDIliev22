@@ -4,15 +4,15 @@
 #include <string>
 
 class Movie {
-private:
-    std::string title;
-    std::string genre;
-
 public:
-    Movie();
-    Movie(const std::string& title, const std::string& genre);
-    std::string getTitle() const;
-    std::string getGenre() const;
+    std::string title;
+    std::string language;
+    std::string genre;
+    std::string releaseDate;
+
+    Movie* next;
+
+    Movie(std::string t, std::string l, std::string g, std::string r) : title(t), language(l), genre(g), releaseDate(r), next(nullptr) {}
 };
 
 #endif

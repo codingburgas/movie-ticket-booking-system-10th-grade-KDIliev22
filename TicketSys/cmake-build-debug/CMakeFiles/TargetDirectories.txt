@@ -1,3 +1,3 @@
-/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles/Chrome.dir
+/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles/TicketSys.dir
 /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles/rebuild_cache.dir

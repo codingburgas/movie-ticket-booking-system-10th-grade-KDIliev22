@@ -1,0 +1,10 @@
+# ninja log v6
+193	231	1751052026305281875	TicketSys	48286bf2b1962ddc
+0	177	1751051967729548888	CMakeFiles/TicketSys.dir/src/login.cpp.o	3dc52f1b536a21a2
+1	14	1751051977497652802	CMakeFiles/TicketSys.dir/src/register.cpp.o	e5eb27e19e5d3212
+1	193	1751052026113279474	CMakeFiles/TicketSys.dir/src/main.cpp.o	acbe022f30867d7c
+0	25	1751055172141051485	build.ninja	6b1297e2f66555f2
+1	195	1751055172144348400	CMakeFiles/TicketSys.dir/src/main.cpp.o	acbe022f30867d7c
+195	232	1751055172338350646	TicketSys	668484af09bade2e
+1	210	1751055189026544089	CMakeFiles/TicketSys.dir/src/main.cpp.o	acbe022f30867d7c
+210	248	1751055189235546514	TicketSys	668484af09bade2e

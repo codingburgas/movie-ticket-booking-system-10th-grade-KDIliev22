@@ -151,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Chrome
+CMAKE_PROJECT_NAME:STATIC=TicketSys
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -219,13 +219,22 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Chrome_BINARY_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug
+Project_BINARY_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug
 
 //Value Computed by CMake
-Chrome_IS_TOP_LEVEL:STATIC=ON
+Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Chrome_SOURCE_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys
+Project_SOURCE_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys
+
+//Value Computed by CMake
+TicketSys_BINARY_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug
+
+//Value Computed by CMake
+TicketSys_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+TicketSys_SOURCE_DIR:STATIC=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys
 
 
 ########################

@@ -1,28 +1,19 @@
 #include <iostream>
-#include "precompiler.h"
+#include "cinema.h"
+
 int main() {
-    Show show("Back to the Future", "10:17 PM");
-    show.generateSeats(12);
-    bool running = true;
-    while (running) {
-        std::string customerName;
-        int seatNumber;
-        show.displaySeats();
-        std::cout << "Enter your name: ";
-        std::cin >> customerName;
-        std::cout << "Choose seat number: ";
-        std::cin >> seatNumber;
-        if (!show.isSeatAvailable(seatNumber)) {
-            std::cout << "Seat is already booked or invalid. Try again.\n";
-            continue;
-        }
-        show.bookSeat(seatNumber);
-        Seat selected = show.getSeat(seatNumber);
-        Booking b(customerName, show, selected);
-        b.saveToFile("bookings.txt");
-        std::cout << "Booking confirmed for " << customerName << " - Seat #" << selected.getNumber() << " (" << selected.getType() << ")\n";
-        std::cout << "Book another? (1 = Y / 0 = N): ";
-        std::cin >> running;
-    }
+    Cinema c("Cinema City");
+    c.addMovie("Kill Bill", "English", "Action", "2003");
+    c.addMovie("The Grand Budapest Hotel", "English", "Comedy", "2014");
+    c.addHall("Hall A");
+    c.addHall("Hall B");
+    Hall* hall = c.hallHead;
+    Movie* movie = c.movieHead;
+    hall->addShow("10:00", movie);
+    hall = hall->next;
+    movie = movie->next;
+    hall->addShow("12:00", movie);
+    c.displayShowtimes("Kill Bill");
+    c.displayShowtimes("The Grand Budapest Hotel");
     return 0;
 }

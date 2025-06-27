@@ -2,24 +2,14 @@
 #define SHOW_H
 
 #include <string>
-#include <vector>
-#include "seat.h"
+#include "movie.h"
 
 class Show {
-private:
-    std::string movieTitle;
-    std::string time;
-    std::vector<Seat> seats;
 public:
-    Show();
-    Show(const std::string& movieTitle, const std::string& time);
-    std::string getMovieTitle() const;
-    std::string getTime() const;
-    void generateSeats(int count);
-    void displaySeats() const;
-    bool bookSeat(int seatNumber);
-    bool isSeatAvailable(int seatNumber) const;
-    Seat getSeat(int seatNumber) const;
+    std::string time;
+    Movie* movie;
+    Show* next;
+    Show(std::string t, Movie* m) : time(t), movie(m), next(nullptr) {}
 };
 
 #endif
