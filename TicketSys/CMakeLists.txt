@@ -7,4 +7,6 @@ include_directories(include)
 
 file(GLOB SOURCES "src/*.cpp")
 
-add_executable(TicketSys ${SOURCES})
+add_executable(TicketSys ${SOURCES}
+        include/booking.h
+        include/bookingsystem.h)

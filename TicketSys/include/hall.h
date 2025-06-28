@@ -20,4 +20,4 @@ public:
     }
 };
 
-#endif
+#endif //HALL_H

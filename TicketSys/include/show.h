@@ -12,4 +12,4 @@ public:
     Show(std::string t, Movie* m) : time(t), movie(m), next(nullptr) {}
 };
 
-#endif
+#endif //SHOW_H

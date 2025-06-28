@@ -10,7 +10,6 @@ public:
     Movie* movieHead;
     Hall* hallHead;
     Cinema* next;
-
     Cinema(std::string name) : cinemaName(name), movieHead(nullptr), hallHead(nullptr), next(nullptr) {}
     void addMovie(std::string title, std::string language, std::string genre, std::string releaseDate) {
         Movie* newMovie = new Movie(title, language, genre, releaseDate);
@@ -21,7 +20,6 @@ public:
             temp->next = newMovie;
         }
     }
-
     void addHall(std::string hallName) {
         Hall* newHall = new Hall(hallName);
         if (!hallHead) hallHead = newHall;
@@ -55,4 +53,4 @@ public:
     }
 };
 
-#endif
+#endif //CINEMA_H
