@@ -9,4 +9,5 @@ file(GLOB SOURCES "src/*.cpp")
 
 add_executable(TicketSys ${SOURCES}
         include/booking.h
-        include/bookingsystem.h)
+        include/bookingsystem.h
+        include/seat.h)

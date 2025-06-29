@@ -7,7 +7,7 @@ int main() {
     BookingSystem bookingSystem;
     cinema.addMovie("Kill Bill", "English", "Thriller", "2003");
     cinema.addMovie("The Grand Budapest Hotel", "English", "Comedy", "2014");
-    cinema.addHall("Hall A"); // Placeholders for now
+    cinema.addHall("Hall A");
     cinema.addHall("Hall B");
     Hall* hallA = cinema.hallHead;
     Hall* hallB = hallA->next;
@@ -51,24 +51,18 @@ int main() {
             case 3: {
                 std::string customerName, paymentMethod, bookingType;
                 std::string hallName, showTime;
-
                 std::cout << "Enter customer name: ";
                 getline(std::cin, customerName);
-
                 std::cout << "Enter booking type (online/walk-in): ";
                 getline(std::cin, bookingType);
-
                 std::cout << "Enter payment method (card/cash): ";
                 getline(std::cin, paymentMethod);
-
                 std::cout << "Enter hall name: ";
                 getline(std::cin, hallName);
-
                 std::cout << "Enter show time: ";
                 getline(std::cin, showTime);
                 Hall* selectedHall = cinema.hallHead;
                 Show* selectedShow = nullptr;
-
                 while (selectedHall) {
                     if (selectedHall->hallName == hallName) {
                         Show* s = selectedHall->showHead;
@@ -84,7 +78,7 @@ int main() {
                     selectedHall = selectedHall->next;
                 }
                 if (selectedShow) {
-                    bookingSystem.makeBooking(customerName, paymentMethod, bookingType, selectedShow);
+                    //bookingSystem.makeBooking(customerName, paymentMethod, bookingType, selectedShow);
                 } else {
                     std::cout << "Show not found.\n";
                 }
@@ -93,7 +87,7 @@ int main() {
             }
             case 4: {
                 std::cout << "--- All Bookings ---\n";
-                bookingSystem.listBookings();
+                //bookingSystem.listBookings();
                 break;
             }
             case 0:
@@ -102,10 +96,7 @@ int main() {
             default:
                 std::cout << "Invalid choice.\n";
         }
-
         std::cout << "\n";
-
     } while (choice != 0);
-
     return 0;
 }

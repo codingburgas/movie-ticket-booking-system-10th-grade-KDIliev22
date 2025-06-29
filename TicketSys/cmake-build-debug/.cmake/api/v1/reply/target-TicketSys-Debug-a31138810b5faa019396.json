@@ -104,7 +104,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -124,6 +125,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/bookingsystem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/seat.h",
 			"sourceGroupIndex" : 1
 		}
 	],
