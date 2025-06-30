@@ -22,6 +22,12 @@ public:
             }
         }
     }
+    void makeBooking(std::string customerName, std::string paymentMethod, std::string bookingType, Show* show) {
+        std::cout << "Booking made for " << customerName << ". Payment form: " << paymentMethod << " (" << bookingType << ")\n";
+    }
+    void listBookings() {
+        std::cout << "Listing all bookings.\n";
+    }
 };
 
 #endif // BOOKINGSYSTEM_H
