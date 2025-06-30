@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TicketSys.dir/src/main.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/movie.cpp.o"
   "CMakeFiles/TicketSys.dir/src/movie.cpp.o.d"
+  "CMakeFiles/TicketSys.dir/src/notifications.cpp.o"
+  "CMakeFiles/TicketSys.dir/src/notifications.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/seat.cpp.o"
   "CMakeFiles/TicketSys.dir/src/seat.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/show.cpp.o"

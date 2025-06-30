@@ -185,6 +185,8 @@ CMakeFiles/TicketSys.dir/src/main.cpp.o: \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/show.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/movie.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/seat.h \
+ /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/notifications.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/bookingsystem.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/datastorage.h \
- /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/cinema.h
+ /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/cinema.h \
+ /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/notifications.h

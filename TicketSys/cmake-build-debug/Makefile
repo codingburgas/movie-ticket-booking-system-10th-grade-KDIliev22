@@ -297,6 +297,30 @@ src/movie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/movie.cpp.s
 .PHONY : src/movie.cpp.s
 
+src/notifications.o: src/notifications.cpp.o
+.PHONY : src/notifications.o
+
+# target to build an object file
+src/notifications.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/notifications.cpp.o
+.PHONY : src/notifications.cpp.o
+
+src/notifications.i: src/notifications.cpp.i
+.PHONY : src/notifications.i
+
+# target to preprocess a source file
+src/notifications.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/notifications.cpp.i
+.PHONY : src/notifications.cpp.i
+
+src/notifications.s: src/notifications.cpp.s
+.PHONY : src/notifications.s
+
+# target to generate assembly for a file
+src/notifications.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/notifications.cpp.s
+.PHONY : src/notifications.cpp.s
+
 src/seat.o: src/seat.cpp.o
 .PHONY : src/seat.o
 
@@ -375,6 +399,9 @@ help:
 	@echo "... src/movie.o"
 	@echo "... src/movie.i"
 	@echo "... src/movie.s"
+	@echo "... src/notifications.o"
+	@echo "... src/notifications.i"
+	@echo "... src/notifications.s"
 	@echo "... src/seat.o"
 	@echo "... src/seat.i"
 	@echo "... src/seat.s"

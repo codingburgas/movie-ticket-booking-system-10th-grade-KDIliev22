@@ -3,6 +3,7 @@
 
 #include "hall.h"
 #include "movie.h"
+#include "notifications.h"
 
 class Cinema {
 public:

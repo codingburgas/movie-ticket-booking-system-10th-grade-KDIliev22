@@ -9,6 +9,7 @@ TicketSys: \
   CMakeFiles/TicketSys.dir/src/hall.cpp.o \
   CMakeFiles/TicketSys.dir/src/main.cpp.o \
   CMakeFiles/TicketSys.dir/src/movie.cpp.o \
+  CMakeFiles/TicketSys.dir/src/notifications.cpp.o \
   CMakeFiles/TicketSys.dir/src/seat.cpp.o \
   CMakeFiles/TicketSys.dir/src/show.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libstdc++.so \
@@ -58,6 +59,8 @@ CMakeFiles/TicketSys.dir/src/hall.cpp.o:
 CMakeFiles/TicketSys.dir/src/main.cpp.o:
 
 CMakeFiles/TicketSys.dir/src/movie.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/notifications.cpp.o:
 
 CMakeFiles/TicketSys.dir/src/seat.cpp.o:
 

@@ -1,24 +1,31 @@
 #include "cinema.h"
 #include <iostream>
+
 Cinema::Cinema(std::string name) : cinemaName(name), movieHead(nullptr), hallHead(nullptr), next(nullptr) {}
+
 void Cinema::addMovie(std::string title, std::string language, std::string genre, std::string releaseDate) {
     Movie* newMovie = new Movie(title, language, genre, releaseDate);
-    if (!movieHead) movieHead = newMovie;
-    else {
+    if (!movieHead) {
+        movieHead = newMovie;
+    } else {
         Movie* temp = movieHead;
         while (temp->next) temp = temp->next;
         temp->next = newMovie;
     }
+    NotificationSystem::addNotification("New movie released: " + title);
 }
+
 void Cinema::addHall(std::string hallName) {
     Hall* newHall = new Hall(hallName);
-    if (!hallHead) hallHead = newHall;
-    else {
+    if (!hallHead) {
+        hallHead = newHall;
+    } else {
         Hall* temp = hallHead;
         while (temp->next) temp = temp->next;
         temp->next = newHall;
     }
 }
+
 void Cinema::deleteMovie(std::string title) {
     Movie* current = movieHead;
     Movie* prev = nullptr;
@@ -31,10 +38,12 @@ void Cinema::deleteMovie(std::string title) {
     else prev->next = current->next;
     delete current;
 }
+
 void Cinema::deleteShow(std::string hallName, std::string time) {
     Hall* hall = hallHead;
     while (hall && hall->hallName != hallName) hall = hall->next;
     if (!hall) return;
+
     Show* current = hall->showHead;
     Show* prev = nullptr;
     while (current && current->time != time) {
@@ -46,6 +55,7 @@ void Cinema::deleteShow(std::string hallName, std::string time) {
     else prev->next = current->next;
     delete current;
 }
+
 void Cinema::displayShowtimes(std::string movieTitle) {
     Movie* movie = movieHead;
     while (movie) {

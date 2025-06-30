@@ -170,10 +170,24 @@ CMakeFiles/TicketSys.dir/src/movie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/movie.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp -o CMakeFiles/TicketSys.dir/src/movie.cpp.s
 
+CMakeFiles/TicketSys.dir/src/notifications.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/notifications.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/notifications.cpp
+CMakeFiles/TicketSys.dir/src/notifications.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TicketSys.dir/src/notifications.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/notifications.cpp.o -MF CMakeFiles/TicketSys.dir/src/notifications.cpp.o.d -o CMakeFiles/TicketSys.dir/src/notifications.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/notifications.cpp
+
+CMakeFiles/TicketSys.dir/src/notifications.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/notifications.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/notifications.cpp > CMakeFiles/TicketSys.dir/src/notifications.cpp.i
+
+CMakeFiles/TicketSys.dir/src/notifications.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/notifications.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/notifications.cpp -o CMakeFiles/TicketSys.dir/src/notifications.cpp.s
+
 CMakeFiles/TicketSys.dir/src/seat.cpp.o: CMakeFiles/TicketSys.dir/flags.make
 CMakeFiles/TicketSys.dir/src/seat.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp
 CMakeFiles/TicketSys.dir/src/seat.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TicketSys.dir/src/seat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TicketSys.dir/src/seat.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/seat.cpp.o -MF CMakeFiles/TicketSys.dir/src/seat.cpp.o.d -o CMakeFiles/TicketSys.dir/src/seat.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp
 
 CMakeFiles/TicketSys.dir/src/seat.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/TicketSys.dir/src/seat.cpp.s: cmake_force
 CMakeFiles/TicketSys.dir/src/show.cpp.o: CMakeFiles/TicketSys.dir/flags.make
 CMakeFiles/TicketSys.dir/src/show.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp
 CMakeFiles/TicketSys.dir/src/show.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TicketSys.dir/src/show.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TicketSys.dir/src/show.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/show.cpp.o -MF CMakeFiles/TicketSys.dir/src/show.cpp.o.d -o CMakeFiles/TicketSys.dir/src/show.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp
 
 CMakeFiles/TicketSys.dir/src/show.cpp.i: cmake_force
@@ -207,6 +221,7 @@ TicketSys_OBJECTS = \
 "CMakeFiles/TicketSys.dir/src/hall.cpp.o" \
 "CMakeFiles/TicketSys.dir/src/main.cpp.o" \
 "CMakeFiles/TicketSys.dir/src/movie.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/notifications.cpp.o" \
 "CMakeFiles/TicketSys.dir/src/seat.cpp.o" \
 "CMakeFiles/TicketSys.dir/src/show.cpp.o"
 
@@ -220,12 +235,13 @@ TicketSys: CMakeFiles/TicketSys.dir/src/datastorage.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/hall.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/main.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/movie.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/notifications.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/seat.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/show.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/build.make
 TicketSys: CMakeFiles/TicketSys.dir/compiler_depend.ts
 TicketSys: CMakeFiles/TicketSys.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable TicketSys"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable TicketSys"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TicketSys.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
