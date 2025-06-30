@@ -72,10 +72,66 @@ include CMakeFiles/TicketSys.dir/flags.make
 CMakeFiles/TicketSys.dir/codegen:
 .PHONY : CMakeFiles/TicketSys.dir/codegen
 
+CMakeFiles/TicketSys.dir/src/booking.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/booking.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/booking.cpp
+CMakeFiles/TicketSys.dir/src/booking.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TicketSys.dir/src/booking.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/booking.cpp.o -MF CMakeFiles/TicketSys.dir/src/booking.cpp.o.d -o CMakeFiles/TicketSys.dir/src/booking.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/booking.cpp
+
+CMakeFiles/TicketSys.dir/src/booking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/booking.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/booking.cpp > CMakeFiles/TicketSys.dir/src/booking.cpp.i
+
+CMakeFiles/TicketSys.dir/src/booking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/booking.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/booking.cpp -o CMakeFiles/TicketSys.dir/src/booking.cpp.s
+
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/bookingsystem.cpp
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o -MF CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o.d -o CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/bookingsystem.cpp
+
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/bookingsystem.cpp > CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.i
+
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/bookingsystem.cpp -o CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.s
+
+CMakeFiles/TicketSys.dir/src/cinema.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/cinema.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/cinema.cpp
+CMakeFiles/TicketSys.dir/src/cinema.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TicketSys.dir/src/cinema.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/cinema.cpp.o -MF CMakeFiles/TicketSys.dir/src/cinema.cpp.o.d -o CMakeFiles/TicketSys.dir/src/cinema.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/cinema.cpp
+
+CMakeFiles/TicketSys.dir/src/cinema.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/cinema.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/cinema.cpp > CMakeFiles/TicketSys.dir/src/cinema.cpp.i
+
+CMakeFiles/TicketSys.dir/src/cinema.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/cinema.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/cinema.cpp -o CMakeFiles/TicketSys.dir/src/cinema.cpp.s
+
+CMakeFiles/TicketSys.dir/src/hall.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/hall.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/hall.cpp
+CMakeFiles/TicketSys.dir/src/hall.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TicketSys.dir/src/hall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/hall.cpp.o -MF CMakeFiles/TicketSys.dir/src/hall.cpp.o.d -o CMakeFiles/TicketSys.dir/src/hall.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/hall.cpp
+
+CMakeFiles/TicketSys.dir/src/hall.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/hall.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/hall.cpp > CMakeFiles/TicketSys.dir/src/hall.cpp.i
+
+CMakeFiles/TicketSys.dir/src/hall.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/hall.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/hall.cpp -o CMakeFiles/TicketSys.dir/src/hall.cpp.s
+
 CMakeFiles/TicketSys.dir/src/main.cpp.o: CMakeFiles/TicketSys.dir/flags.make
 CMakeFiles/TicketSys.dir/src/main.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/main.cpp
 CMakeFiles/TicketSys.dir/src/main.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TicketSys.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TicketSys.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/main.cpp.o -MF CMakeFiles/TicketSys.dir/src/main.cpp.o.d -o CMakeFiles/TicketSys.dir/src/main.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/main.cpp
 
 CMakeFiles/TicketSys.dir/src/main.cpp.i: cmake_force
@@ -86,18 +142,74 @@ CMakeFiles/TicketSys.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/main.cpp -o CMakeFiles/TicketSys.dir/src/main.cpp.s
 
+CMakeFiles/TicketSys.dir/src/movie.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/movie.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp
+CMakeFiles/TicketSys.dir/src/movie.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TicketSys.dir/src/movie.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/movie.cpp.o -MF CMakeFiles/TicketSys.dir/src/movie.cpp.o.d -o CMakeFiles/TicketSys.dir/src/movie.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp
+
+CMakeFiles/TicketSys.dir/src/movie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/movie.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp > CMakeFiles/TicketSys.dir/src/movie.cpp.i
+
+CMakeFiles/TicketSys.dir/src/movie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/movie.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp -o CMakeFiles/TicketSys.dir/src/movie.cpp.s
+
+CMakeFiles/TicketSys.dir/src/seat.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/seat.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp
+CMakeFiles/TicketSys.dir/src/seat.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TicketSys.dir/src/seat.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/seat.cpp.o -MF CMakeFiles/TicketSys.dir/src/seat.cpp.o.d -o CMakeFiles/TicketSys.dir/src/seat.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp
+
+CMakeFiles/TicketSys.dir/src/seat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/seat.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp > CMakeFiles/TicketSys.dir/src/seat.cpp.i
+
+CMakeFiles/TicketSys.dir/src/seat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/seat.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp -o CMakeFiles/TicketSys.dir/src/seat.cpp.s
+
+CMakeFiles/TicketSys.dir/src/show.cpp.o: CMakeFiles/TicketSys.dir/flags.make
+CMakeFiles/TicketSys.dir/src/show.cpp.o: /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp
+CMakeFiles/TicketSys.dir/src/show.cpp.o: CMakeFiles/TicketSys.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TicketSys.dir/src/show.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TicketSys.dir/src/show.cpp.o -MF CMakeFiles/TicketSys.dir/src/show.cpp.o.d -o CMakeFiles/TicketSys.dir/src/show.cpp.o -c /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp
+
+CMakeFiles/TicketSys.dir/src/show.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TicketSys.dir/src/show.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp > CMakeFiles/TicketSys.dir/src/show.cpp.i
+
+CMakeFiles/TicketSys.dir/src/show.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TicketSys.dir/src/show.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp -o CMakeFiles/TicketSys.dir/src/show.cpp.s
+
 # Object files for target TicketSys
 TicketSys_OBJECTS = \
-"CMakeFiles/TicketSys.dir/src/main.cpp.o"
+"CMakeFiles/TicketSys.dir/src/booking.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/cinema.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/hall.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/main.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/movie.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/seat.cpp.o" \
+"CMakeFiles/TicketSys.dir/src/show.cpp.o"
 
 # External object files for target TicketSys
 TicketSys_EXTERNAL_OBJECTS =
 
+TicketSys: CMakeFiles/TicketSys.dir/src/booking.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/cinema.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/hall.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/src/main.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/movie.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/seat.cpp.o
+TicketSys: CMakeFiles/TicketSys.dir/src/show.cpp.o
 TicketSys: CMakeFiles/TicketSys.dir/build.make
 TicketSys: CMakeFiles/TicketSys.dir/compiler_depend.ts
 TicketSys: CMakeFiles/TicketSys.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TicketSys"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable TicketSys"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TicketSys.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

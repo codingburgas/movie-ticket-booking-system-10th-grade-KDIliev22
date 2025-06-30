@@ -129,6 +129,102 @@ TicketSys/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/build
 .PHONY : TicketSys/fast
 
+src/booking.o: src/booking.cpp.o
+.PHONY : src/booking.o
+
+# target to build an object file
+src/booking.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/booking.cpp.o
+.PHONY : src/booking.cpp.o
+
+src/booking.i: src/booking.cpp.i
+.PHONY : src/booking.i
+
+# target to preprocess a source file
+src/booking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/booking.cpp.i
+.PHONY : src/booking.cpp.i
+
+src/booking.s: src/booking.cpp.s
+.PHONY : src/booking.s
+
+# target to generate assembly for a file
+src/booking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/booking.cpp.s
+.PHONY : src/booking.cpp.s
+
+src/bookingsystem.o: src/bookingsystem.cpp.o
+.PHONY : src/bookingsystem.o
+
+# target to build an object file
+src/bookingsystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o
+.PHONY : src/bookingsystem.cpp.o
+
+src/bookingsystem.i: src/bookingsystem.cpp.i
+.PHONY : src/bookingsystem.i
+
+# target to preprocess a source file
+src/bookingsystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.i
+.PHONY : src/bookingsystem.cpp.i
+
+src/bookingsystem.s: src/bookingsystem.cpp.s
+.PHONY : src/bookingsystem.s
+
+# target to generate assembly for a file
+src/bookingsystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.s
+.PHONY : src/bookingsystem.cpp.s
+
+src/cinema.o: src/cinema.cpp.o
+.PHONY : src/cinema.o
+
+# target to build an object file
+src/cinema.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/cinema.cpp.o
+.PHONY : src/cinema.cpp.o
+
+src/cinema.i: src/cinema.cpp.i
+.PHONY : src/cinema.i
+
+# target to preprocess a source file
+src/cinema.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/cinema.cpp.i
+.PHONY : src/cinema.cpp.i
+
+src/cinema.s: src/cinema.cpp.s
+.PHONY : src/cinema.s
+
+# target to generate assembly for a file
+src/cinema.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/cinema.cpp.s
+.PHONY : src/cinema.cpp.s
+
+src/hall.o: src/hall.cpp.o
+.PHONY : src/hall.o
+
+# target to build an object file
+src/hall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/hall.cpp.o
+.PHONY : src/hall.cpp.o
+
+src/hall.i: src/hall.cpp.i
+.PHONY : src/hall.i
+
+# target to preprocess a source file
+src/hall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/hall.cpp.i
+.PHONY : src/hall.cpp.i
+
+src/hall.s: src/hall.cpp.s
+.PHONY : src/hall.s
+
+# target to generate assembly for a file
+src/hall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/hall.cpp.s
+.PHONY : src/hall.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,6 +249,78 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/movie.o: src/movie.cpp.o
+.PHONY : src/movie.o
+
+# target to build an object file
+src/movie.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/movie.cpp.o
+.PHONY : src/movie.cpp.o
+
+src/movie.i: src/movie.cpp.i
+.PHONY : src/movie.i
+
+# target to preprocess a source file
+src/movie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/movie.cpp.i
+.PHONY : src/movie.cpp.i
+
+src/movie.s: src/movie.cpp.s
+.PHONY : src/movie.s
+
+# target to generate assembly for a file
+src/movie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/movie.cpp.s
+.PHONY : src/movie.cpp.s
+
+src/seat.o: src/seat.cpp.o
+.PHONY : src/seat.o
+
+# target to build an object file
+src/seat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/seat.cpp.o
+.PHONY : src/seat.cpp.o
+
+src/seat.i: src/seat.cpp.i
+.PHONY : src/seat.i
+
+# target to preprocess a source file
+src/seat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/seat.cpp.i
+.PHONY : src/seat.cpp.i
+
+src/seat.s: src/seat.cpp.s
+.PHONY : src/seat.s
+
+# target to generate assembly for a file
+src/seat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/seat.cpp.s
+.PHONY : src/seat.cpp.s
+
+src/show.o: src/show.cpp.o
+.PHONY : src/show.o
+
+# target to build an object file
+src/show.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/show.cpp.o
+.PHONY : src/show.cpp.o
+
+src/show.i: src/show.cpp.i
+.PHONY : src/show.i
+
+# target to preprocess a source file
+src/show.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/show.cpp.i
+.PHONY : src/show.cpp.i
+
+src/show.s: src/show.cpp.s
+.PHONY : src/show.s
+
+# target to generate assembly for a file
+src/show.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/show.cpp.s
+.PHONY : src/show.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TicketSys"
+	@echo "... src/booking.o"
+	@echo "... src/booking.i"
+	@echo "... src/booking.s"
+	@echo "... src/bookingsystem.o"
+	@echo "... src/bookingsystem.i"
+	@echo "... src/bookingsystem.s"
+	@echo "... src/cinema.o"
+	@echo "... src/cinema.i"
+	@echo "... src/cinema.s"
+	@echo "... src/hall.o"
+	@echo "... src/hall.i"
+	@echo "... src/hall.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/movie.o"
+	@echo "... src/movie.i"
+	@echo "... src/movie.s"
+	@echo "... src/seat.o"
+	@echo "... src/seat.i"
+	@echo "... src/seat.s"
+	@echo "... src/show.o"
+	@echo "... src/show.i"
+	@echo "... src/show.s"
 .PHONY : help
 
 

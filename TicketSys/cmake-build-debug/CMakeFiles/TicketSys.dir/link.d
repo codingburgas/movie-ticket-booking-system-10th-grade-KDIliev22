@@ -2,7 +2,14 @@ TicketSys: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
+  CMakeFiles/TicketSys.dir/src/booking.cpp.o \
+  CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o \
+  CMakeFiles/TicketSys.dir/src/cinema.cpp.o \
+  CMakeFiles/TicketSys.dir/src/hall.cpp.o \
   CMakeFiles/TicketSys.dir/src/main.cpp.o \
+  CMakeFiles/TicketSys.dir/src/movie.cpp.o \
+  CMakeFiles/TicketSys.dir/src/seat.cpp.o \
+  CMakeFiles/TicketSys.dir/src/show.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
@@ -37,7 +44,21 @@ TicketSys: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o:
 
+CMakeFiles/TicketSys.dir/src/booking.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/cinema.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/hall.cpp.o:
+
 CMakeFiles/TicketSys.dir/src/main.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/movie.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/seat.cpp.o:
+
+CMakeFiles/TicketSys.dir/src/show.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libstdc++.so:
 

@@ -175,15 +175,14 @@ CMakeFiles/TicketSys.dir/src/main.cpp.o: \
  /usr/include/c++/15.1.1/bits/unique_ptr.h \
  /usr/include/c++/15.1.1/ext/aligned_buffer.h \
  /usr/include/c++/15.1.1/bits/fs_dir.h \
- /usr/include/c++/15.1.1/bits/fs_ops.h \
+ /usr/include/c++/15.1.1/bits/fs_ops.h /usr/include/c++/15.1.1/vector \
+ /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
+ /usr/include/c++/15.1.1/bits/stl_vector.h \
+ /usr/include/c++/15.1.1/bits/stl_bvector.h \
+ /usr/include/c++/15.1.1/bits/vector.tcc \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/cinema.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/hall.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/show.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/movie.h \
  /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/seat.h \
- /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/bookingsystem.h \
- /usr/include/c++/15.1.1/vector \
- /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
- /usr/include/c++/15.1.1/bits/stl_vector.h \
- /usr/include/c++/15.1.1/bits/stl_bvector.h \
- /usr/include/c++/15.1.1/bits/vector.tcc
+ /home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/include/bookingsystem.h

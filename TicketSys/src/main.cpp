@@ -1,17 +1,21 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <vector>
 #include "cinema.h"
 #include "bookingsystem.h"
+
 namespace fs = std::filesystem;
+
 bool userExists(const std::string& username) {
     return fs::exists(username + "_account.txt");
 }
 
-void registerUser(const std::string& username) {
+void registerUser(const std::string& username, bool isAdmin = false) {
     std::ofstream outFile(username + "_account.txt");
     if (outFile.is_open()) {
         outFile << "Username: " << username << "\n";
+        outFile << "Admin: " << (isAdmin ? "yes" : "no") << "\n";
         outFile.close();
         std::cout << "User registered successfully.\n";
     } else {
@@ -20,7 +24,16 @@ void registerUser(const std::string& username) {
 }
 
 bool isAdmin(const std::string& username) {
-    return username == "admin";
+    std::ifstream inFile(username + "_account.txt");
+    if (inFile.is_open()) {
+        std::string line;
+        while (getline(inFile, line)) {
+            if (line.find("Admin: yes") != std::string::npos) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 void adminMenu(Cinema& cinema) {
@@ -105,14 +118,18 @@ void adminMenu(Cinema& cinema) {
         }
     } while (choice != 0);
 }
+
 void displaySeats(Show* show) {
     std::cout << "\n--- Available Seats ---\n";
     Seat* seat = show->seatHead;
     while (seat) {
-        std::cout << "Seat " << seat->seatNumber << " (" << seat->seatType << ") - $" << seat->price << " - " << (seat->isBooked ? "Booked" : "Available") << "\n";
+        std::cout << "Seat " << seat->seatNumber << " (" << seat->seatType
+                  << ") - $" << seat->price
+                  << " - " << (seat->isBooked ? "Booked" : "Available") << "\n";
         seat = seat->next;
     }
 }
+
 int main() {
     Cinema cinema("Cinema City");
     BookingSystem bookingSystem;
@@ -139,6 +156,7 @@ int main() {
         show1->addSeat(std::to_string(i), type);
         show2->addSeat(std::to_string(i), type);
     }
+
     std::string username;
     int loginChoice;
     std::cout << "----- Welcome to Movie Ticket System -----\n";
@@ -147,6 +165,7 @@ int main() {
     std::cout << "Enter choice: ";
     std::cin >> loginChoice;
     std::cin.ignore();
+
     if (loginChoice == 1) {
         std::cout << "Enter your username: ";
         getline(std::cin, username);
@@ -172,13 +191,14 @@ int main() {
 
     int choice;
     do {
-        std::cout << "Movie ticket booking system --------- /\n";
+        std::cout << "\nMovie ticket booking system\n";
         std::cout << "Logged in as: " << username << "\n";
         if (isAdmin(username)) {
             std::cout << "ADMIN MODE\n";
             adminMenu(cinema);
             continue;
         }
+
         std::cout << "1. List movies\n";
         std::cout << "2. List shows\n";
         std::cout << "3. Make a booking\n";
@@ -190,21 +210,24 @@ int main() {
 
         switch (choice) {
             case 1: {
-                std::cout << "--- Movies ---\n";
+                std::cout << "\n--- Movies ---\n";
                 Movie* m = cinema.movieHead;
                 while (m) {
-                    std::cout << m->title << " (" << m->genre << ", " << m->language << ", " << m->releaseDate << ")\n";
+                    std::cout << m->title << " (" << m->genre << ", "
+                              << m->language << ", " << m->releaseDate << ")\n";
                     m = m->next;
                 }
                 break;
             }
             case 2: {
-                std::cout << "--- Shows ---\n";
+                std::cout << "\n--- Shows ---\n";
                 Hall* h = cinema.hallHead;
                 while (h) {
                     Show* s = h->showHead;
                     while (s) {
-                        std::cout << "Hall: " << h->hallName << ", Movie: " << s->movie->title << ", Time: " << s->time << "\n";
+                        std::cout << "Hall: " << h->hallName
+                                  << ", Movie: " << s->movie->title
+                                  << ", Time: " << s->time << "\n";
                         s = s->next;
                     }
                     h = h->next;
@@ -215,18 +238,22 @@ int main() {
                 std::string bookingType, paymentMethod, hallName, showTime;
                 std::cout << "Enter booking type (online/walk-in): ";
                 getline(std::cin, bookingType);
+
                 if (bookingType == "online") {
                     paymentMethod = "card";
                 } else {
                     std::cout << "Enter payment method (card/cash): ";
                     getline(std::cin, paymentMethod);
                 }
+
                 std::cout << "Enter hall name: ";
                 getline(std::cin, hallName);
                 std::cout << "Enter show time: ";
                 getline(std::cin, showTime);
+
                 Hall* selectedHall = cinema.hallHead;
                 Show* selectedShow = nullptr;
+
                 while (selectedHall) {
                     if (selectedHall->hallName == hallName) {
                         Show* s = selectedHall->showHead;
@@ -241,38 +268,51 @@ int main() {
                     }
                     selectedHall = selectedHall->next;
                 }
+
                 if (selectedShow) {
                     displaySeats(selectedShow);
+
                     std::vector<std::string> selectedSeats;
                     std::string seatNumber;
                     double total = 0.0;
+
                     std::cout << "Enter seat numbers to book (one per line, empty to finish):\n";
                     while (true) {
                         getline(std::cin, seatNumber);
                         if (seatNumber.empty()) break;
+
                         Seat* seat = selectedShow->findSeat(seatNumber);
                         if (!seat) {
                             std::cout << "Invalid seat number.\n";
                             continue;
                         }
+
                         if (seat->isBooked) {
                             std::cout << "Seat " << seatNumber << " is already booked.\n";
                             continue;
                         }
+
                         selectedSeats.push_back(seatNumber);
                         total += seat->price;
                         std::cout << "Added seat " << seatNumber << " ($" << seat->price << ")\n";
                     }
+
                     if (!selectedSeats.empty()) {
                         BookingSystem bs;
                         bs.bookSeats(selectedShow, username, selectedSeats);
+
                         std::ofstream outFile(username + "_bookings.txt", std::ios::app);
                         if (outFile.is_open()) {
-                            outFile << "Booking: " << selectedShow->movie->title << ", Time: " << selectedShow->time << ", Hall: " << hallName << ", Seats: ";
+                            outFile << "Booking: " << selectedShow->movie->title
+                                    << ", Time: " << selectedShow->time
+                                    << ", Hall: " << hallName
+                                    << ", Seats: ";
                             for (const auto& seat : selectedSeats) {
                                 outFile << seat << " ";
                             }
-                            outFile << ", Total: $" << total << ", Payment: " << paymentMethod << ", Type: " << bookingType << "\n";
+                            outFile << ", Total: $" << total
+                                    << ", Payment: " << paymentMethod
+                                    << ", Type: " << bookingType << "\n";
                             outFile.close();
                             std::cout << "Booking saved!\n";
                         } else {
@@ -285,7 +325,7 @@ int main() {
                 break;
             }
             case 4: {
-                std::cout << "--- My Bookings ---\n";
+                std::cout << "\n--- My Bookings ---\n";
                 std::ifstream inFile(username + "_bookings.txt");
                 if (inFile.is_open()) {
                     std::string line;
@@ -305,5 +345,6 @@ int main() {
                 std::cout << "Invalid choice.\n";
         }
     } while (choice != 0);
+
     return 0;
 }

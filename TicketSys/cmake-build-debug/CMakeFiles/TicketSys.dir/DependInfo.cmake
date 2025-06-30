@@ -8,7 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/booking.cpp" "CMakeFiles/TicketSys.dir/src/booking.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/booking.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/bookingsystem.cpp" "CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/cinema.cpp" "CMakeFiles/TicketSys.dir/src/cinema.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/cinema.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/hall.cpp" "CMakeFiles/TicketSys.dir/src/hall.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/hall.cpp.o.d"
   "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/main.cpp" "CMakeFiles/TicketSys.dir/src/main.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/main.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/movie.cpp" "CMakeFiles/TicketSys.dir/src/movie.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/movie.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/seat.cpp" "CMakeFiles/TicketSys.dir/src/seat.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/seat.cpp.o.d"
+  "/home/kaloyan/projects/movie-ticket-booking-system-10th-grade-KDIliev22/TicketSys/src/show.cpp" "CMakeFiles/TicketSys.dir/src/show.cpp.o" "gcc" "CMakeFiles/TicketSys.dir/src/show.cpp.o.d"
   "" "TicketSys" "gcc" "CMakeFiles/TicketSys.dir/link.d"
   )
 
