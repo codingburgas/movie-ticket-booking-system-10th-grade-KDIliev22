@@ -10,7 +10,9 @@ public:
     Movie* movieHead;
     Hall* hallHead;
     Cinema* next;
+
     Cinema(std::string name) : cinemaName(name), movieHead(nullptr), hallHead(nullptr), next(nullptr) {}
+
     void addMovie(std::string title, std::string language, std::string genre, std::string releaseDate) {
         Movie* newMovie = new Movie(title, language, genre, releaseDate);
         if (!movieHead) movieHead = newMovie;
@@ -20,6 +22,7 @@ public:
             temp->next = newMovie;
         }
     }
+
     void addHall(std::string hallName) {
         Hall* newHall = new Hall(hallName);
         if (!hallHead) hallHead = newHall;
@@ -29,6 +32,54 @@ public:
             temp->next = newHall;
         }
     }
+
+    void deleteMovie(std::string title) {
+        Movie* current = movieHead;
+        Movie* prev = nullptr;
+
+        while (current && current->title != title) {
+            prev = current;
+            current = current->next;
+        }
+
+        if (!current) return;
+
+        if (!prev) {
+            movieHead = current->next;
+        } else {
+            prev->next = current->next;
+        }
+
+        delete current;
+    }
+
+    void deleteShow(std::string hallName, std::string time) {
+        Hall* hall = hallHead;
+        while (hall && hall->hallName != hallName) {
+            hall = hall->next;
+        }
+
+        if (!hall) return;
+
+        Show* current = hall->showHead;
+        Show* prev = nullptr;
+
+        while (current && current->time != time) {
+            prev = current;
+            current = current->next;
+        }
+
+        if (!current) return;
+
+        if (!prev) {
+            hall->showHead = current->next;
+        } else {
+            prev->next = current->next;
+        }
+
+        delete current;
+    }
+
     void displayShowtimes(std::string movieTitle) {
         Movie* movie = movieHead;
         while (movie) {
@@ -53,4 +104,4 @@ public:
     }
 };
 
-#endif //CINEMA_H
+#endif // CINEMA_H
