@@ -4,6 +4,7 @@
 #include <vector>
 #include "cinema.h"
 #include "bookingsystem.h"
+#include "datastorage.h"
 
 namespace fs = std::filesystem;
 
@@ -17,9 +18,6 @@ void registerUser(const std::string& username, bool isAdmin = false) {
         outFile << "Username: " << username << "\n";
         outFile << "Admin: " << (isAdmin ? "yes" : "no") << "\n";
         outFile.close();
-        std::cout << "User registered successfully.\n";
-    } else {
-        std::cout << "Failed to register user.\n";
     }
 }
 
@@ -39,46 +37,44 @@ bool isAdmin(const std::string& username) {
 void adminMenu(Cinema& cinema) {
     int choice;
     do {
-        std::cout << "\n--- Admin Menu ---\n";
-        std::cout << "1. Add Movie\n";
-        std::cout << "2. Delete Movie\n";
+        std::cout << "\n1. Add Movie\n";
+        std::cout << "2. Add Hall\n";
         std::cout << "3. Add Show\n";
-        std::cout << "4. Delete Show\n";
-        std::cout << "0. Back to Main Menu\n";
-        std::cout << "Enter choice: ";
+        std::cout << "4. View All Data\n";
+        std::cout << "5. Save Data\n";
+        std::cout << "0. Back\n";
+        std::cout << "Choice: ";
         std::cin >> choice;
         std::cin.ignore();
 
         switch (choice) {
             case 1: {
                 std::string title, language, genre, releaseDate;
-                std::cout << "Enter movie title: ";
+                std::cout << "Title: ";
                 getline(std::cin, title);
-                std::cout << "Enter language: ";
+                std::cout << "Language: ";
                 getline(std::cin, language);
-                std::cout << "Enter genre: ";
+                std::cout << "Genre: ";
                 getline(std::cin, genre);
-                std::cout << "Enter release date: ";
+                std::cout << "Release Date: ";
                 getline(std::cin, releaseDate);
                 cinema.addMovie(title, language, genre, releaseDate);
-                std::cout << "Movie added successfully.\n";
                 break;
             }
             case 2: {
-                std::string title;
-                std::cout << "Enter movie title to delete: ";
-                getline(std::cin, title);
-                cinema.deleteMovie(title);
-                std::cout << "Movie deleted if it existed.\n";
+                std::string hallName;
+                std::cout << "Hall Name: ";
+                getline(std::cin, hallName);
+                cinema.addHall(hallName);
                 break;
             }
             case 3: {
                 std::string hallName, time, movieTitle;
-                std::cout << "Enter hall name: ";
+                std::cout << "Hall Name: ";
                 getline(std::cin, hallName);
-                std::cout << "Enter show time: ";
+                std::cout << "Time: ";
                 getline(std::cin, time);
-                std::cout << "Enter movie title: ";
+                std::cout << "Movie Title: ";
                 getline(std::cin, movieTitle);
 
                 Movie* movie = cinema.movieHead;
@@ -86,33 +82,47 @@ void adminMenu(Cinema& cinema) {
                     movie = movie->next;
                 }
 
-                if (!movie) {
-                    std::cout << "Movie not found.\n";
-                    break;
-                }
-
                 Hall* hall = cinema.hallHead;
                 while (hall && hall->hallName != hallName) {
                     hall = hall->next;
                 }
 
-                if (!hall) {
-                    std::cout << "Hall not found.\n";
-                    break;
+                if (hall && movie) {
+                    hall->addShow(time, movie);
                 }
-
-                hall->addShow(time, movie);
-                std::cout << "Show added successfully.\n";
                 break;
             }
             case 4: {
-                std::string hallName, time;
-                std::cout << "Enter hall name: ";
-                getline(std::cin, hallName);
-                std::cout << "Enter show time: ";
-                getline(std::cin, time);
-                cinema.deleteShow(hallName, time);
-                std::cout << "Show deleted if it existed.\n";
+                std::cout << "\nMovies:\n";
+                Movie* m = cinema.movieHead;
+                while (m) {
+                    std::cout << m->title << "\n";
+                    m = m->next;
+                }
+
+                std::cout << "\nHalls:\n";
+                Hall* h = cinema.hallHead;
+                while (h) {
+                    std::cout << h->hallName << "\n";
+                    h = h->next;
+                }
+
+                std::cout << "\nShows:\n";
+                h = cinema.hallHead;
+                while (h) {
+                    Show* s = h->showHead;
+                    while (s) {
+                        std::cout << h->hallName << " - " << s->movie->title << " at " << s->time << "\n";
+                        s = s->next;
+                    }
+                    h = h->next;
+                }
+                break;
+            }
+            case 5: {
+                DataStorage::saveMovies(cinema.movieHead);
+                DataStorage::saveHalls(cinema.hallHead);
+                DataStorage::saveShows(cinema.hallHead);
                 break;
             }
         }
@@ -120,114 +130,93 @@ void adminMenu(Cinema& cinema) {
 }
 
 void displaySeats(Show* show) {
-    std::cout << "\n--- Available Seats ---\n";
     Seat* seat = show->seatHead;
     while (seat) {
-        std::cout << "Seat " << seat->seatNumber << " (" << seat->seatType
-                  << ") - $" << seat->price
-                  << " - " << (seat->isBooked ? "Booked" : "Available") << "\n";
+        std::cout << seat->seatNumber << " (" << seat->seatType << ") - "
+                  << (seat->isBooked ? "Booked" : "Available") << "\n";
         seat = seat->next;
     }
 }
 
 int main() {
-    Cinema cinema("Cinema City");
-    BookingSystem bookingSystem;
+    if (!fs::exists("admin_account.txt")) {
+        registerUser("admin", true);
+    }
 
-    cinema.addMovie("Kill Bill", "English", "Thriller", "2003");
-    cinema.addMovie("The Grand Budapest Hotel", "English", "Comedy", "2014");
-    cinema.addHall("Hall A");
-    cinema.addHall("Hall B");
+    Cinema cinema("Cineplex");
+    cinema.movieHead = DataStorage::loadMovies();
+    cinema.hallHead = DataStorage::loadHalls();
+    DataStorage::loadShows(cinema.hallHead, cinema.movieHead);
 
-    Hall* hallA = cinema.hallHead;
-    Hall* hallB = hallA->next;
-
-    hallA->addShow("18:00", cinema.movieHead);
-    hallB->addShow("20:00", cinema.movieHead->next);
-
-    Show* show1 = hallA->showHead;
-    Show* show2 = hallB->showHead;
-
-    for (int i = 1; i <= 10; i++) {
-        std::string type = "front row";
-        if (i > 7) type = "middle";
-        else if (i > 3) type = "back";
-
-        show1->addSeat(std::to_string(i), type);
-        show2->addSeat(std::to_string(i), type);
+    Hall* hall = cinema.hallHead;
+    while (hall) {
+        Show* show = hall->showHead;
+        while (show) {
+            for (int i = 1; i <= 10; i++) {
+                std::string type = "silver";
+                if (i > 7) type = "platinum";
+                else if (i > 3) type = "gold";
+                show->addSeat(std::to_string(i), type);
+            }
+            show = show->next;
+        }
+        hall = hall->next;
     }
 
     std::string username;
     int loginChoice;
-    std::cout << "----- Welcome to Movie Ticket System -----\n";
-    std::cout << "1. Login\n";
-    std::cout << "2. Register\n";
-    std::cout << "Enter choice: ";
+    std::cout << "1. Login\n2. Register\nChoice: ";
     std::cin >> loginChoice;
     std::cin.ignore();
 
     if (loginChoice == 1) {
-        std::cout << "Enter your username: ";
+        std::cout << "Username: ";
         getline(std::cin, username);
         if (!userExists(username)) {
-            std::cout << "User not found. Exiting.\n";
             return 0;
-        } else {
-            std::cout << "Login successful.\n";
         }
     } else if (loginChoice == 2) {
-        std::cout << "Enter desired username: ";
+        std::cout << "Username: ";
         getline(std::cin, username);
         if (userExists(username)) {
-            std::cout << "User already exists. Exiting.\n";
             return 0;
-        } else {
-            registerUser(username);
         }
+        registerUser(username);
     } else {
-        std::cout << "Invalid choice. Exiting.\n";
         return 0;
     }
 
     int choice;
     do {
-        std::cout << "\nMovie ticket booking system\n";
-        std::cout << "Logged in as: " << username << "\n";
         if (isAdmin(username)) {
-            std::cout << "ADMIN MODE\n";
             adminMenu(cinema);
             continue;
         }
 
-        std::cout << "1. List movies\n";
-        std::cout << "2. List shows\n";
-        std::cout << "3. Make a booking\n";
-        std::cout << "4. List my bookings\n";
+        std::cout << "\n1. List Movies\n";
+        std::cout << "2. List Shows\n";
+        std::cout << "3. Book Ticket\n";
+        std::cout << "4. My Bookings\n";
         std::cout << "0. Exit\n";
-        std::cout << "Enter choice: ";
+        std::cout << "Choice: ";
         std::cin >> choice;
         std::cin.ignore();
 
         switch (choice) {
             case 1: {
-                std::cout << "\n--- Movies ---\n";
                 Movie* m = cinema.movieHead;
                 while (m) {
-                    std::cout << m->title << " (" << m->genre << ", "
-                              << m->language << ", " << m->releaseDate << ")\n";
+                    std::cout << m->title << "\n";
                     m = m->next;
                 }
                 break;
             }
             case 2: {
-                std::cout << "\n--- Shows ---\n";
                 Hall* h = cinema.hallHead;
                 while (h) {
                     Show* s = h->showHead;
                     while (s) {
-                        std::cout << "Hall: " << h->hallName
-                                  << ", Movie: " << s->movie->title
-                                  << ", Time: " << s->time << "\n";
+                        std::cout << h->hallName << " - " << s->movie->title << " at " << s->time << "\n";
                         s = s->next;
                     }
                     h = h->next;
@@ -235,116 +224,67 @@ int main() {
                 break;
             }
             case 3: {
-                std::string bookingType, paymentMethod, hallName, showTime;
-                std::cout << "Enter booking type (online/walk-in): ";
-                getline(std::cin, bookingType);
-
-                if (bookingType == "online") {
-                    paymentMethod = "card";
-                } else {
-                    std::cout << "Enter payment method (card/cash): ";
-                    getline(std::cin, paymentMethod);
-                }
-
-                std::cout << "Enter hall name: ";
+                std::string hallName, showTime;
+                std::cout << "Hall Name: ";
                 getline(std::cin, hallName);
-                std::cout << "Enter show time: ";
+                std::cout << "Show Time: ";
                 getline(std::cin, showTime);
 
-                Hall* selectedHall = cinema.hallHead;
-                Show* selectedShow = nullptr;
-
-                while (selectedHall) {
-                    if (selectedHall->hallName == hallName) {
-                        Show* s = selectedHall->showHead;
-                        while (s) {
+                Hall* hall = cinema.hallHead;
+                Show* show = nullptr;
+                while (hall && !show) {
+                    if (hall->hallName == hallName) {
+                        Show* s = hall->showHead;
+                        while (s && !show) {
                             if (s->time == showTime) {
-                                selectedShow = s;
-                                break;
+                                show = s;
                             }
                             s = s->next;
                         }
-                        break;
                     }
-                    selectedHall = selectedHall->next;
+                    hall = hall->next;
                 }
 
-                if (selectedShow) {
-                    displaySeats(selectedShow);
-
-                    std::vector<std::string> selectedSeats;
-                    std::string seatNumber;
-                    double total = 0.0;
-
-                    std::cout << "Enter seat numbers to book (one per line, empty to finish):\n";
+                if (show) {
+                    displaySeats(show);
+                    std::vector<std::string> seats;
+                    std::string seatNum;
                     while (true) {
-                        getline(std::cin, seatNumber);
-                        if (seatNumber.empty()) break;
-
-                        Seat* seat = selectedShow->findSeat(seatNumber);
-                        if (!seat) {
-                            std::cout << "Invalid seat number.\n";
-                            continue;
-                        }
-
-                        if (seat->isBooked) {
-                            std::cout << "Seat " << seatNumber << " is already booked.\n";
-                            continue;
-                        }
-
-                        selectedSeats.push_back(seatNumber);
-                        total += seat->price;
-                        std::cout << "Added seat " << seatNumber << " ($" << seat->price << ")\n";
+                        std::cout << "Seat Number (empty to finish): ";
+                        getline(std::cin, seatNum);
+                        if (seatNum.empty()) break;
+                        seats.push_back(seatNum);
                     }
 
-                    if (!selectedSeats.empty()) {
-                        BookingSystem bs;
-                        bs.bookSeats(selectedShow, username, selectedSeats);
+                    BookingSystem bs;
+                    bs.bookSeats(show, username, seats);
 
-                        std::ofstream outFile(username + "_bookings.txt", std::ios::app);
-                        if (outFile.is_open()) {
-                            outFile << "Booking: " << selectedShow->movie->title
-                                    << ", Time: " << selectedShow->time
-                                    << ", Hall: " << hallName
-                                    << ", Seats: ";
-                            for (const auto& seat : selectedSeats) {
-                                outFile << seat << " ";
-                            }
-                            outFile << ", Total: $" << total
-                                    << ", Payment: " << paymentMethod
-                                    << ", Type: " << bookingType << "\n";
-                            outFile.close();
-                            std::cout << "Booking saved!\n";
-                        } else {
-                            std::cout << "Failed to save booking.\n";
+                    std::ofstream outFile(username + "_bookings.txt", std::ios::app);
+                    if (outFile.is_open()) {
+                        outFile << show->movie->title << " at " << show->time << " in " << hallName << " - Seats: ";
+                        for (const auto& s : seats) {
+                            outFile << s << " ";
                         }
+                        outFile << "\n";
+                        outFile.close();
                     }
-                } else {
-                    std::cout << "Show not found.\n";
                 }
                 break;
             }
             case 4: {
-                std::cout << "\n--- My Bookings ---\n";
                 std::ifstream inFile(username + "_bookings.txt");
-                if (inFile.is_open()) {
-                    std::string line;
-                    while (getline(inFile, line)) {
-                        std::cout << line << "\n";
-                    }
-                    inFile.close();
-                } else {
-                    std::cout << "No bookings found.\n";
+                std::string line;
+                while (getline(inFile, line)) {
+                    std::cout << line << "\n";
                 }
                 break;
             }
-            case 0:
-                std::cout << "Exiting system.\n";
-                break;
-            default:
-                std::cout << "Invalid choice.\n";
         }
     } while (choice != 0);
+
+    DataStorage::saveMovies(cinema.movieHead);
+    DataStorage::saveHalls(cinema.hallHead);
+    DataStorage::saveShows(cinema.hallHead);
 
     return 0;
 }

@@ -201,6 +201,30 @@ src/cinema.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/cinema.cpp.s
 .PHONY : src/cinema.cpp.s
 
+src/datastorage.o: src/datastorage.cpp.o
+.PHONY : src/datastorage.o
+
+# target to build an object file
+src/datastorage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/datastorage.cpp.o
+.PHONY : src/datastorage.cpp.o
+
+src/datastorage.i: src/datastorage.cpp.i
+.PHONY : src/datastorage.i
+
+# target to preprocess a source file
+src/datastorage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/datastorage.cpp.i
+.PHONY : src/datastorage.cpp.i
+
+src/datastorage.s: src/datastorage.cpp.s
+.PHONY : src/datastorage.s
+
+# target to generate assembly for a file
+src/datastorage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TicketSys.dir/build.make CMakeFiles/TicketSys.dir/src/datastorage.cpp.s
+.PHONY : src/datastorage.cpp.s
+
 src/hall.o: src/hall.cpp.o
 .PHONY : src/hall.o
 
@@ -339,6 +363,9 @@ help:
 	@echo "... src/cinema.o"
 	@echo "... src/cinema.i"
 	@echo "... src/cinema.s"
+	@echo "... src/datastorage.o"
+	@echo "... src/datastorage.i"
+	@echo "... src/datastorage.s"
 	@echo "... src/hall.o"
 	@echo "... src/hall.i"
 	@echo "... src/hall.s"

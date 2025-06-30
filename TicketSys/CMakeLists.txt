@@ -17,4 +17,6 @@ add_executable(TicketSys ${SOURCES}
         src/seat.cpp
         src/movie.cpp
         src/bookingsystem.cpp
-        src/booking.cpp)
+        src/booking.cpp
+        include/datastorage.h
+        src/datastorage.cpp)

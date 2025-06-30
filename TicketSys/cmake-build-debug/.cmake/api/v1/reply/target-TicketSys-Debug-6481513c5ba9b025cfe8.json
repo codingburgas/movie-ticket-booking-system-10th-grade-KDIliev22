@@ -70,7 +70,8 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		}
 	],
@@ -110,16 +111,18 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				8,
 				9,
-				10
+				10,
+				11,
+				12
 			]
 		}
 	],
@@ -141,6 +144,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/cinema.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/datastorage.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -186,6 +195,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/seat.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/datastorage.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TicketSys.dir/src/bookingsystem.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/cinema.cpp.o"
   "CMakeFiles/TicketSys.dir/src/cinema.cpp.o.d"
+  "CMakeFiles/TicketSys.dir/src/datastorage.cpp.o"
+  "CMakeFiles/TicketSys.dir/src/datastorage.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/hall.cpp.o"
   "CMakeFiles/TicketSys.dir/src/hall.cpp.o.d"
   "CMakeFiles/TicketSys.dir/src/main.cpp.o"
