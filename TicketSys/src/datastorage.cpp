@@ -7,8 +7,7 @@ void DataStorage::saveMovies(Movie* movieHead) {
     std::ofstream file("movies.txt");
     Movie* current = movieHead;
     while (current) {
-        file << current->title << "," << current->language << ","
-             << current->genre << "," << current->releaseDate << "\n";
+        file << current->title << "," << current->language << "," << current->genre << "," << current->releaseDate << "\n";
         current = current->next;
     }
 }

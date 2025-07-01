@@ -177,9 +177,9 @@ int main() {
         Show* show = hall->showHead;
         while (show) {
             for (int i = 1; i <= 10; i++) {
-                std::string type = "silver";
-                if (i > 7) type = "platinum";
-                else if (i > 3) type = "gold";
+                std::string type = "front-row";
+                if (i > 7) type = "middle";
+                else if (i > 3) type = "back-row";
                 show->addSeat(std::to_string(i), type);
             }
             show = show->next;
@@ -229,6 +229,7 @@ int main() {
         std::cout << "3. Book Tickets\n";
         std::cout << "4. Cancel Booking\n";
         std::cout << "5. View My Bookings\n";
+        std::cout << "6. View Notifications\n";
         std::cout << "0. Exit\n";
         std::cout << "Choice: ";
         std::cin >> choice;
@@ -283,8 +284,7 @@ int main() {
                     displaySeats(show);
                     std::vector<std::string> seats;
                     std::string seatNum;
-                    double total = 0.0;
-
+                    double total = 0;
                     while (true) {
                         std::cout << "Seat Number (empty to finish): ";
                         getline(std::cin, seatNum);
@@ -376,6 +376,18 @@ int main() {
                 std::string line;
                 while (getline(inFile, line)) {
                     std::cout << line << "\n";
+                }
+                break;
+            }
+            case 6: {
+                std::cout << "\n=== NOTIFICATIONS ===\n";
+                auto notes = NotificationSystem::getNotifications();
+                if (notes.empty()) {
+                    std::cout << "No notifications\n";
+                } else {
+                    for (const auto& note : notes) {
+                        std::cout << note << "\n";
+                    }
                 }
                 break;
             }
